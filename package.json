@@ -4,6 +4,6 @@
   "main": "main.svelte",
   "files": [
   	"i18n*",
-  	"ui-assets/*",
+  	"ui-assets/*"
   ]
 }
