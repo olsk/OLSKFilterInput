@@ -1,0 +1,8 @@
+{
+  "name": "OLSKFilterInput",
+  "private": true,
+  "main": "main.svelte",
+  "files": [
+  	"i18n*"
+  ]
+}
