@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/_shared/_external/normalize.css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/panel/_shared/ui-style.css">
+	<link rel="stylesheet" type="text/css" href="/<%= OLSKSharedPageControllerSlug %>/_compiled/ui-style.css">
+
+	<script type="text/javascript">
+		window.OLSKPublicConstants = function (inputData) {
+			return {
+				OLSKSharedPageCurrentLanguage: 'en',
+			}[inputData];
+		};
+	</script>
+</head>
+<body>
+
+<script src="/<%= OLSKSharedPageControllerSlug %>/_compiled/ui-behaviour.js"></script>
+
+<hr>
+
+<p>
+	<strong>TestFilterInputPlaceholder</strong>
+	<button onclick="Main.$set({TestFilterInputPlaceholder: 'alfa'})" id="OLSKFilterInputTestSetFilterInputPlaceholderFilled">filled</button>
+	<button onclick="Main.$set({TestFilterInputPlaceholder: ''})" id="OLSKFilterInputTestSetFilterInputPlaceholderBlank">blank</button>
+</p>
+
+<p>
+	<strong>TestFilterInputText</strong>
+	<button onclick="Main.$set({TestFilterInputText: 'alfa'})" id="OLSKFilterInputTestSetFilled">filled</button>
+	<button onclick="Main.$set({TestFilterInputText: ''})" id="OLSKFilterInputTestSetBlank">blank</button>
+</p>
+
+<p>
+	<strong>didRun</strong>
+	<script type="text/javascript">
+		Main.$on('FilterInputDispatchClear', function() {
+			window.OLSKFilterInputTestRun.innerHTML = parseInt(window.OLSKFilterInputTestRun.innerHTML) + 1;
+		});
+	</script>
+	<span id="OLSKFilterInputTestRun">0</span>
+</p>
+
+</body>
+</html>
