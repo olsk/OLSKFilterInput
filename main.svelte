@@ -15,7 +15,7 @@ function FilterInputDispatchClear() {
 <input bind:value={ FilterInputText } placeholder={ FilterInputPlaceholder || OLSKLocalized('OLSKFilterInputPlaceholderText') } accesskey="f" class="OLSKFilterInput" autofocus />
 
 {#if FilterInputText}
-	<button on:click={ FilterInputDispatchClear } class="OLSKFilterInputClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle" style="background-image: url('/panel/_shared/ui-assets/wIKFilterClear.svg')" title={ OLSKLocalized('OLSKFilterInputClearButtonText') }></button>
+	<button on:click={ FilterInputDispatchClear } class="OLSKFilterInputClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle" style="background-image: url('/_shared/OLSKFilterInput/ui-assets/clear-button.svg')" title={ OLSKLocalized('OLSKFilterInputClearButtonText') }></button>
 {/if}
 
 </div>
