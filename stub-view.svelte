@@ -1,15 +1,16 @@
 <script>
-export let TestFilterInputText = '';
-export let TestFilterInputPlaceholder = '';
+export let StubInputWrapperValue = '';
 
 import Module from './main.svelte';
 import { OLSKLocalized } from './../../../../_shared/common/global.js'
 
 import { createEventDispatcher } from 'svelte';
 const dispatch = createEventDispatcher();
-function FilterInputDispatchClear() {
-	dispatch('FilterInputDispatchClear');
+function InputWrapperDispatchClear() {
+	dispatch('InputWrapperDispatchClear');
 }
 </script>
 
-<Module FilterInputText={ TestFilterInputText } FilterInputPlaceholder={ TestFilterInputPlaceholder } OLSKLocalized={ OLSKLocalized } on:FilterInputDispatchClear={ FilterInputDispatchClear } />
+<Module InputWrapperValue={ StubInputWrapperValue } OLSKLocalized={ OLSKLocalized } on:InputWrapperDispatchClear={ InputWrapperDispatchClear }>
+	<input bind:value={ StubInputWrapperValue }>
+</Module>

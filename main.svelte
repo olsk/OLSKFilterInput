@@ -1,27 +1,26 @@
 <script>
-export let FilterInputText = '';
-export let FilterInputPlaceholder = '';
+export let InputWrapperValue = '';
 export let OLSKLocalized = null;
 
 import { createEventDispatcher } from 'svelte';
 const dispatch = createEventDispatcher();
-function FilterInputDispatchClear() {
-	dispatch('FilterInputDispatchClear');
+function InputWrapperDispatchClear() {
+	dispatch('InputWrapperDispatchClear');
 }
 </script>
 
-<div class="OLSKFilterInputContainer OLSKToolbarFlexible">
+<div class="OLSKInputWrapperContainer OLSKToolbarFlexible">
 
-<input bind:value={ FilterInputText } placeholder={ FilterInputPlaceholder || OLSKLocalized('OLSKFilterInputPlaceholderText') } accesskey="f" class="OLSKFilterInput" autofocus />
+<slot></slot>
 
-{#if FilterInputText}
-	<button on:click={ FilterInputDispatchClear } class="OLSKFilterInputClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle" style="background-image: url('/_shared/_external/OLSKFilterInput/ui-assets/clear-button.svg')" title={ OLSKLocalized('OLSKFilterInputClearButtonText') }></button>
+{#if InputWrapperValue}
+	<button on:click={ InputWrapperDispatchClear } class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle" style="background-image: url('/_shared/_external/OLSKInputWrapper/ui-assets/clear-button.svg')" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') }></button>
 {/if}
 
 </div>
 
 <style>
-.OLSKFilterInputContainer {
+.OLSKInputWrapperContainer {
 	/* @ContainerStation:Parent */
 	position: relative;
 
@@ -32,7 +31,7 @@ function FilterInputDispatchClear() {
 	outline: none;
 }
 
-input {
+.OLSKInputWrapperContainer :global(input) {
 	padding: 4px;
 	margin: 0;
 	border: 1px solid #e6e6e6;
@@ -45,11 +44,11 @@ input {
 	flex-grow: 1;
 }
 
-.OLSKFilterInputClearButton {
-	--OLSKFilterInputClearButtonSize: 24px;
+.OLSKInputWrapperClearButton {
+	--OLSKInputWrapperClearButtonSize: 24px;
 
-	width: var(--OLSKFilterInputClearButtonSize);
-	height: var(--OLSKFilterInputClearButtonSize);
+	width: var(--OLSKInputWrapperClearButtonSize);
+	height: var(--OLSKInputWrapperClearButtonSize);
 
 	background-size: cover;
 
@@ -57,12 +56,12 @@ input {
 	position: absolute;
 	right: 4px;
 	top: 50%;
-	margin-top: calc(-1 * var(--OLSKFilterInputClearButtonSize) / 2);
+	margin-top: calc(-1 * var(--OLSKInputWrapperClearButtonSize) / 2);
 }
 
 @media screen and (max-width: 760px) {
 
-input {
+.OLSKInputWrapperContainer :global(input) {
 	height: 30px;
 
 	font-size: 14px;

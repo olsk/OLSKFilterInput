@@ -1,44 +1,40 @@
 import { throws, deepEqual } from 'assert';
 
 const browser = new OLSKBrowser();
-const kDefaultRoutePath = '/modules/OLSKFilterInput';
-const OLSKFilterInput = '.OLSKFilterInput';
-const OLSKFilterInputClearButton = '.OLSKFilterInputClearButton';
+const kDefaultRoutePath = '/modules/OLSKInputWrapper';
+const OLSKInputWrapperClearButton = '.OLSKInputWrapperClearButton';
 
-describe('OLSKFilterInputDiscovery', function testOLSKFilterInputDiscovery() {
+describe('OLSKInputWrapperDiscovery', function testOLSKInputWrapperDiscovery() {
 
 	before(function() {
 		return browser.visit(kDefaultRoutePath);
 	});
 	
 	it('on startup', function() {
-		browser.assert.elements(OLSKFilterInput, 1);
-		browser.assert.attribute(OLSKFilterInput, 'accesskey', 'f');
-
-		browser.assert.elements(OLSKFilterInputClearButton, 0);
+		browser.assert.elements(OLSKInputWrapperClearButton, 0);
 	});
 
-	context('OLSKFilterInputClearButton', function() {
+	context('OLSKInputWrapperClearButton', function() {
 
 		it('shows if inputData', async function() {
-			browser.pressButton('#OLSKFilterInputTestSetFilled');
-			await browser.wait({ element: OLSKFilterInputClearButton });
+			browser.fill('input', 'alfa');
+			await browser.wait({ element: OLSKInputWrapperClearButton });
 
-			browser.assert.elements(OLSKFilterInputClearButton, 1);
+			browser.assert.elements(OLSKInputWrapperClearButton, 1);
 		});
 
 		it('hides if no inputData', async function() {
-			browser.pressButton('#OLSKFilterInputTestSetBlank');
-			await browser.wait({ element: OLSKFilterInputClearButton });
+			browser.fill('input', '');
+			await browser.wait({ element: OLSKInputWrapperClearButton });
 
-			browser.assert.elements(OLSKFilterInputClearButton, 0);
+			browser.assert.elements(OLSKInputWrapperClearButton, 0);
 		});
 
 	});
 
 });
 
-describe('OLSKFilterInputLanguage', function testOLSKFilterInputLanguage() {
+describe('OLSKInputWrapperLanguage', function testOLSKInputWrapperLanguage() {
 
 	['en'].forEach(function (languageCode) {
 
@@ -52,30 +48,12 @@ describe('OLSKFilterInputLanguage', function testOLSKFilterInputLanguage() {
 				return browser.visit(kDefaultRoutePath);
 			});
 
-			it('on startup', function() {
-				browser.assert.attribute(OLSKFilterInput, 'placeholder', uLocalized('OLSKFilterInputPlaceholderText'));
-			});
-
 			it('if inputData', async function() { 
-				browser.pressButton('#OLSKFilterInputTestSetFilled');
-				await browser.wait({ element: OLSKFilterInputClearButton });
+				browser.fill('input', 'alfa');
+				await browser.wait({ element: OLSKInputWrapperClearButton });
 
-				browser.assert.attribute(OLSKFilterInputClearButton, 'title', uLocalized('OLSKFilterInputClearButtonText'));
-				deepEqual(browser.query(OLSKFilterInputClearButton).textContent, '');
-			});
-
-			it('on set FilterInputPlaceholder filled', async function() {
-				browser.pressButton('#OLSKFilterInputTestSetFilterInputPlaceholderFilled');
-				await browser.wait({ element: OLSKFilterInput });
-
-				browser.assert.attribute(OLSKFilterInput, 'placeholder', 'alfa');
-			});
-
-			it('on set FilterInputPlaceholder blank', async function() {
-				browser.pressButton('#OLSKFilterInputTestSetFilterInputPlaceholderBlank');
-				await browser.wait({ element: OLSKFilterInput });
-
-				browser.assert.attribute(OLSKFilterInput, 'placeholder', uLocalized('OLSKFilterInputPlaceholderText'));
+				browser.assert.attribute(OLSKInputWrapperClearButton, 'title', uLocalized('OLSKInputWrapperClearButtonText'));
+				deepEqual(browser.query(OLSKInputWrapperClearButton).textContent, '');
 			});
 
 		});
@@ -83,24 +61,24 @@ describe('OLSKFilterInputLanguage', function testOLSKFilterInputLanguage() {
 	});
 });
 
-describe('OLSKFilterInputInteraction', function testOLSKFilterInputInteraction() {
+describe('OLSKInputWrapperInteraction', function testOLSKInputWrapperInteraction() {
 
 	before(function() {
 		return browser.visit(kDefaultRoutePath);
 	});
 
-	context('OLSKFilterInputClearButton', function() {
+	context('OLSKInputWrapperClearButton', function() {
 
 		it('fires callback on click', async function() {
-			deepEqual(browser.query('#OLSKFilterInputTestRun').textContent, '0');
+			deepEqual(browser.query('#OLSKInputWrapperInputWrapperDispatchClear').textContent, '0');
 
-			browser.fill(OLSKFilterInput, 'alfa');
-			await browser.wait({ element: OLSKFilterInputClearButton });
+			browser.fill('input', 'alfa');
+			await browser.wait({ element: OLSKInputWrapperClearButton });
 
-			browser.pressButton(OLSKFilterInputClearButton);
-			await browser.wait({ element: OLSKFilterInputClearButton });
+			browser.pressButton(OLSKInputWrapperClearButton);
+			await browser.wait({ element: OLSKInputWrapperClearButton });
 
-			deepEqual(browser.query('#OLSKFilterInputTestRun').textContent, '1');
+			deepEqual(browser.query('#OLSKInputWrapperInputWrapperDispatchClear').textContent, '1');
 		});
 
 	});

@@ -2,7 +2,6 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="/_shared/_external/normalize.css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="/panel/_shared/ui-style.css">
 	<link rel="stylesheet" type="text/css" href="/<%= OLSKSharedPageControllerSlug %>/_compiled/ui-style.css">
 
 	<script type="text/javascript">
@@ -20,25 +19,13 @@
 <hr>
 
 <p>
-	<strong>TestFilterInputPlaceholder</strong>
-	<button onclick="Main.$set({TestFilterInputPlaceholder: 'alfa'})" id="OLSKFilterInputTestSetFilterInputPlaceholderFilled">filled</button>
-	<button onclick="Main.$set({TestFilterInputPlaceholder: ''})" id="OLSKFilterInputTestSetFilterInputPlaceholderBlank">blank</button>
-</p>
-
-<p>
-	<strong>TestFilterInputText</strong>
-	<button onclick="Main.$set({TestFilterInputText: 'alfa'})" id="OLSKFilterInputTestSetFilled">filled</button>
-	<button onclick="Main.$set({TestFilterInputText: ''})" id="OLSKFilterInputTestSetBlank">blank</button>
-</p>
-
-<p>
-	<strong>didRun</strong>
+	<strong>InputWrapperDispatchClear</strong>
 	<script type="text/javascript">
-		Main.$on('FilterInputDispatchClear', function() {
-			window.OLSKFilterInputTestRun.innerHTML = parseInt(window.OLSKFilterInputTestRun.innerHTML) + 1;
+		Main.$on('InputWrapperDispatchClear', function() {
+			window.OLSKInputWrapperInputWrapperDispatchClear.innerHTML = parseInt(window.OLSKInputWrapperInputWrapperDispatchClear.innerHTML) + 1;
 		});
 	</script>
-	<span id="OLSKFilterInputTestRun">0</span>
+	<span id="OLSKInputWrapperInputWrapperDispatchClear">0</span>
 </p>
 
 </body>
