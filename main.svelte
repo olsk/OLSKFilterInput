@@ -14,7 +14,7 @@ function InputWrapperDispatchClear() {
 <slot></slot>
 
 {#if InputWrapperValue}
-	<button on:click={ InputWrapperDispatchClear } class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle" style="background-image: url('/_shared/_external/OLSKInputWrapper/ui-assets/clear-button.svg')" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') }></button>
+	<button on:click={ InputWrapperDispatchClear } class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle" style="background-image: url('/_shared/__external/OLSKInputWrapper/ui-assets/clear-button.svg')" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') }></button>
 {/if}
 
 </div>
