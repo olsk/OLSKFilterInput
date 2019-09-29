@@ -3,7 +3,7 @@
 exports.OLSKControllerRoutes = function() {
 	return process.env.NODE_ENV === 'production' ? {} : {
 		OLSKInputWrapperRoute: {
-			OLSKRoutePath: '/modules/OLSKInputWrapper',
+			OLSKRoutePath: '/stubs/OLSKInputWrapper',
 			OLSKRouteMethod: 'get',
 			OLSKRouteFunction: function(req, res, next) {
 				return res.render(req.OLSKLive.OLSKLivePathJoin(__dirname, 'stub-view'));
