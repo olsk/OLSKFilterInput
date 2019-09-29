@@ -53,7 +53,7 @@ describe('OLSKInputWrapperLanguage', function testOLSKInputWrapperLanguage() {
 				await browser.wait({ element: OLSKInputWrapperClearButton });
 
 				browser.assert.attribute(OLSKInputWrapperClearButton, 'title', uLocalized('OLSKInputWrapperClearButtonText'));
-				deepEqual(browser.query(OLSKInputWrapperClearButton).textContent, '');
+				browser.assert.text(OLSKInputWrapperClearButton, '');
 			});
 
 		});
@@ -70,7 +70,7 @@ describe('OLSKInputWrapperInteraction', function testOLSKInputWrapperInteraction
 	context('OLSKInputWrapperClearButton', function() {
 
 		it('fires callback on click', async function() {
-			deepEqual(browser.query('#OLSKInputWrapperInputWrapperDispatchClear').textContent, '0');
+			browser.assert.text('#OLSKInputWrapperInputWrapperDispatchClear', '0');
 
 			browser.fill('input', 'alfa');
 			await browser.wait({ element: OLSKInputWrapperClearButton });
@@ -78,7 +78,7 @@ describe('OLSKInputWrapperInteraction', function testOLSKInputWrapperInteraction
 			browser.pressButton(OLSKInputWrapperClearButton);
 			await browser.wait({ element: OLSKInputWrapperClearButton });
 
-			deepEqual(browser.query('#OLSKInputWrapperInputWrapperDispatchClear').textContent, '1');
+			browser.assert.text('#OLSKInputWrapperInputWrapperDispatchClear', '1');
 		});
 
 	});
