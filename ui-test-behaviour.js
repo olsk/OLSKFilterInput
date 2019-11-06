@@ -1,4 +1,4 @@
-import { throws, deepEqual } from 'assert';
+const { throws, deepEqual } = require('assert');
 
 const browser = new OLSKBrowser();
 const kDefaultRoutePath = '/modules/OLSKInputWrapper';
