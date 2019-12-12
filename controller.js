@@ -5,7 +5,7 @@ exports.OLSKControllerRoutes = function() {
 		OLSKInputWrapperRoute: {
 			OLSKRoutePath: '/stub/OLSKInputWrapper',
 			OLSKRouteMethod: 'get',
-			OLSKRouteFunction: function(req, res, next) {
+			OLSKRouteFunction (req, res, next) {
 				return res.render(req.OLSKLive.OLSKLivePathJoin(__dirname, 'stub-view'));
 			},
 			OLSKRouteLanguages: ['en'],
