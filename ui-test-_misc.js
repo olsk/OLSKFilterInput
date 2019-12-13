@@ -25,17 +25,17 @@ describe('OLSKInputWrapper_Misc', function () {
 		});
 
 		context('click', function () {
+
+			before(function () {
+				browser.assert.text('#TestOLSKInputWrapperDispatchClear', '0');
+			});
+
+			before(function () {
+				return browser.pressButton(OLSKInputWrapperClearButton);
+			});
 			
 			it('fires callback on click', async function() {
-				browser.assert.text('#OLSKInputWrapperOLSKInputWrapperDispatchClear', '0');
-
-				browser.fill('input', 'alfa');
-				await browser.wait({ element: OLSKInputWrapperClearButton });
-
-				browser.pressButton(OLSKInputWrapperClearButton);
-				await browser.wait({ element: OLSKInputWrapperClearButton });
-
-				browser.assert.text('#OLSKInputWrapperOLSKInputWrapperDispatchClear', '1');
+				browser.assert.text('#TestOLSKInputWrapperDispatchClear', '1');
 			});
 		
 		});

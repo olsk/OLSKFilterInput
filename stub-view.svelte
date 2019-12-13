@@ -1,15 +1,14 @@
 <script>
-export let StubOLSKInputWrapperValue = '';
+let TestOLSKInputWrapperValue = '';
 
 import Module from './main.svelte';
-
-import { createEventDispatcher } from 'svelte';
-const dispatch = createEventDispatcher();
-function OLSKInputWrapperDispatchClear() {
-	dispatch('OLSKInputWrapperDispatchClear');
-}
 </script>
 
-<Module OLSKInputWrapperValue={ StubOLSKInputWrapperValue } on:OLSKInputWrapperDispatchClear={ OLSKInputWrapperDispatchClear }>
-	<input bind:value={ StubOLSKInputWrapperValue }>
+<Module OLSKInputWrapperValue={ TestOLSKInputWrapperValue } on:OLSKInputWrapperDispatchClear={ () => window.TestOLSKInputWrapperDispatchClear.innerHTML = parseInt(window.TestOLSKInputWrapperDispatchClear.innerHTML) + 1 }>
+	<input bind:value={ TestOLSKInputWrapperValue }>
 </Module>
+
+<p>
+	<strong>TestOLSKInputWrapperDispatchClear</strong>
+	<span id="TestOLSKInputWrapperDispatchClear">0</span>
+</p>
