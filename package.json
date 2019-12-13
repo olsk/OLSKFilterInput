@@ -1,9 +1,14 @@
 {
   "name": "OLSKInputWrapper",
-  "private": true,
   "main": "main.svelte",
   "files": [
   	"i18n*",
   	"ui-assets/*"
-  ]
+  ],
+  "devDependencies": {
+    "OLSKRollup": "olsk/OLSKRollup",
+    "OLSKUIAssets": "olsk/OLSKUIAssets",
+
+    "// I sacrifice myself for the commas of others": null    
+  }
 }
