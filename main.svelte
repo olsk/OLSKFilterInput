@@ -1,6 +1,10 @@
 <script>
 export let InputWrapperValue = '';
-export let OLSKLocalized = null;
+
+import OLSKInternational from 'OLSKInternational';
+const OLSKLocalized = function(translationConstant) {
+	return OLSKInternational.OLSKInternationalLocalizedString(translationConstant, JSON.parse(`{"OLSK_I18N_SEARCH_REPLACE":"OLSK_I18N_SEARCH_REPLACE"}`)[window.OLSKPublicConstants('OLSKSharedPageCurrentLanguage')]);
+};
 
 import { createEventDispatcher } from 'svelte';
 const dispatch = createEventDispatcher();
