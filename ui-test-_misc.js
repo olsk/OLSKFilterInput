@@ -19,6 +19,10 @@ describe('OLSKInputWrapper_Misc', function () {
 		it('classes OLSKLayoutButtonNoStyle', function () {
 			browser.assert.hasClass(OLSKInputWrapperClearButton, 'OLSKLayoutButtonNoStyle')
 		});
+		
+		it('classes OLSKToolbarButton', function () {
+			browser.assert.hasClass(OLSKInputWrapperClearButton, 'OLSKToolbarButton')
+		});
 
 		context('click', function () {
 			

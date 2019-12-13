@@ -16,7 +16,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 <slot></slot>
 
 {#if InputWrapperValue}
-	<button class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') } on:click={ InputWrapperDispatchClear }>
+	<button class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle OLSKToolbarButton" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') } on:click={ InputWrapperDispatchClear }>
 		<div class="OLSKInputWrapperClearButtonImage">{@html _OLSKInputClear }</div>
 	</button>
 {/if}
@@ -36,7 +36,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 }
 
 .OLSKInputWrapperContainer :global(input) {
-	padding: 4px;
+	padding: 6px;
 	margin: 0;
 	border: 1px solid #e6e6e6;
 	border-radius: 5px;
@@ -53,8 +53,6 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 
 	width: var(--OLSKInputWrapperClearButtonSize);
 	height: var(--OLSKInputWrapperClearButtonSize);
-
-	background-size: cover;
 
 	/* @ContainerStation:Child */
 	position: absolute;
