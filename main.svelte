@@ -1,16 +1,11 @@
 <script>
-export let OLSKInputWrapperValue = '';
+export let OLSKInputWrapperValue;
+export let OLSKInputWrapperDispatchClear;
 
 import OLSKInternational from 'OLSKInternational';
 const OLSKLocalized = function(translationConstant) {
 	return OLSKInternational.OLSKInternationalLocalizedString(translationConstant, JSON.parse(`{"OLSK_I18N_SEARCH_REPLACE":"OLSK_I18N_SEARCH_REPLACE"}`)[window.OLSKPublicConstants('OLSKSharedPageCurrentLanguage')]);
 };
-
-import { createEventDispatcher } from 'svelte';
-const dispatch = createEventDispatcher();
-function OLSKInputWrapperDispatchClear() {
-	dispatch('OLSKInputWrapperDispatchClear');
-}
 
 import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 </script>
