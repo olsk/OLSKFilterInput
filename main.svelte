@@ -24,10 +24,10 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 
 <style>
 .OLSKInputWrapper {
-	/* @OLSKInputWrapperStation:Parent */
+	/* OLSKInputWrapperStation:Parent */
 	position: relative;
 
-	/* @OLSKInputWrapperFlexbox:Parent */
+	/* OLSKInputWrapperFlexbox:Parent */
 	display: flex;
 
 	/* ChromeRemoveInputOutline */
@@ -43,7 +43,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 	text-indent: 2px;
 	line-height: 1.4;
 
-	/* @OLSKInputWrapperFlexbox:Child */
+	/* OLSKInputWrapperFlexbox:Child */
 	flex-grow: 1;
 }
 
@@ -53,7 +53,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 	width: var(--OLSKInputWrapperClearButtonSize);
 	height: var(--OLSKInputWrapperClearButtonSize);
 
-	/* @OLSKInputWrapperStation:Child */
+	/* OLSKInputWrapperStation:Child */
 	position: absolute;
 	right: 4px;
 	top: 50%;
