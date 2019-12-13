@@ -5,11 +5,11 @@ import Module from './main.svelte';
 
 import { createEventDispatcher } from 'svelte';
 const dispatch = createEventDispatcher();
-function InputWrapperDispatchClear() {
-	dispatch('InputWrapperDispatchClear');
+function OLSKInputWrapperDispatchClear() {
+	dispatch('OLSKInputWrapperDispatchClear');
 }
 </script>
 
-<Module OLSKInputWrapperValue={ StubOLSKInputWrapperValue } on:InputWrapperDispatchClear={ InputWrapperDispatchClear }>
+<Module OLSKInputWrapperValue={ StubOLSKInputWrapperValue } on:OLSKInputWrapperDispatchClear={ OLSKInputWrapperDispatchClear }>
 	<input bind:value={ StubOLSKInputWrapperValue }>
 </Module>

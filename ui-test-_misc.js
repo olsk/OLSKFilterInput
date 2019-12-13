@@ -27,7 +27,7 @@ describe('OLSKInputWrapper_Misc', function () {
 		context('click', function () {
 			
 			it('fires callback on click', async function() {
-				browser.assert.text('#OLSKInputWrapperInputWrapperDispatchClear', '0');
+				browser.assert.text('#OLSKInputWrapperOLSKInputWrapperDispatchClear', '0');
 
 				browser.fill('input', 'alfa');
 				await browser.wait({ element: OLSKInputWrapperClearButton });
@@ -35,7 +35,7 @@ describe('OLSKInputWrapper_Misc', function () {
 				browser.pressButton(OLSKInputWrapperClearButton);
 				await browser.wait({ element: OLSKInputWrapperClearButton });
 
-				browser.assert.text('#OLSKInputWrapperInputWrapperDispatchClear', '1');
+				browser.assert.text('#OLSKInputWrapperOLSKInputWrapperDispatchClear', '1');
 			});
 		
 		});

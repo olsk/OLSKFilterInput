@@ -8,8 +8,8 @@ const OLSKLocalized = function(translationConstant) {
 
 import { createEventDispatcher } from 'svelte';
 const dispatch = createEventDispatcher();
-function InputWrapperDispatchClear() {
-	dispatch('InputWrapperDispatchClear');
+function OLSKInputWrapperDispatchClear() {
+	dispatch('OLSKInputWrapperDispatchClear');
 }
 
 import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
@@ -20,7 +20,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 <slot></slot>
 
 {#if OLSKInputWrapperValue}
-	<button class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle OLSKToolbarButton" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') } on:click={ InputWrapperDispatchClear }>
+	<button class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle OLSKToolbarButton" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') } on:click={ OLSKInputWrapperDispatchClear }>
 		<div class="OLSKInputWrapperClearButtonImage">{@html _OLSKInputClear }</div>
 	</button>
 {/if}
