@@ -1,7 +1,7 @@
 const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 Object.entries({
-	OLSKInputWrapperContainer: '.OLSKInputWrapperContainer',
+	OLSKInputWrapper: '.OLSKInputWrapper',
 
 	OLSKInputWrapperClearButton: '.OLSKInputWrapperClearButton',
 	OLSKInputWrapperClearButtonImage: '.OLSKInputWrapperClearButtonImage',
@@ -15,8 +15,8 @@ describe('OLSKInputWrapper_Access', function () {
 		return browser.OLSKVisit(kDefaultRoute);
 	});
 
-	it('shows OLSKInputWrapperContainer', function () {
-		browser.assert.elements(OLSKInputWrapperContainer, 1);
+	it('shows OLSKInputWrapper', function () {
+		browser.assert.elements(OLSKInputWrapper, 1);
 	});
 
 	it('hides OLSKInputWrapperClearButton', function () {

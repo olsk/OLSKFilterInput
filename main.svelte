@@ -15,7 +15,7 @@ function InputWrapperDispatchClear() {
 import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 </script>
 
-<div class="OLSKInputWrapperContainer OLSKToolbarFlexible">
+<div class="OLSKInputWrapper OLSKToolbarFlexible">
 
 <slot></slot>
 
@@ -28,7 +28,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 </div>
 
 <style>
-.OLSKInputWrapperContainer {
+.OLSKInputWrapper {
 	/* @ContainerStation:Parent */
 	position: relative;
 
@@ -39,7 +39,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 	outline: none;
 }
 
-.OLSKInputWrapperContainer :global(input) {
+.OLSKInputWrapper :global(input) {
 	padding: 6px;
 	margin: 0;
 	border: 1px solid #e6e6e6;
@@ -67,7 +67,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 
 @media screen and (max-width: 760px) {
 
-.OLSKInputWrapperContainer :global(input) {
+.OLSKInputWrapper :global(input) {
 	height: 30px;
 
 	font-size: 14px;
