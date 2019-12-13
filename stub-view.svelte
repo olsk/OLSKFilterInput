@@ -1,5 +1,5 @@
 <script>
-export let StubInputWrapperValue = '';
+export let StubOLSKInputWrapperValue = '';
 
 import Module from './main.svelte';
 
@@ -10,6 +10,6 @@ function InputWrapperDispatchClear() {
 }
 </script>
 
-<Module InputWrapperValue={ StubInputWrapperValue } on:InputWrapperDispatchClear={ InputWrapperDispatchClear }>
-	<input bind:value={ StubInputWrapperValue }>
+<Module OLSKInputWrapperValue={ StubOLSKInputWrapperValue } on:InputWrapperDispatchClear={ InputWrapperDispatchClear }>
+	<input bind:value={ StubOLSKInputWrapperValue }>
 </Module>

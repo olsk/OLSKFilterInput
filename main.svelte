@@ -1,5 +1,5 @@
 <script>
-export let InputWrapperValue = '';
+export let OLSKInputWrapperValue = '';
 
 import OLSKInternational from 'OLSKInternational';
 const OLSKLocalized = function(translationConstant) {
@@ -19,7 +19,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 
 <slot></slot>
 
-{#if InputWrapperValue}
+{#if OLSKInputWrapperValue}
 	<button class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle OLSKToolbarButton" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') } on:click={ InputWrapperDispatchClear }>
 		<div class="OLSKInputWrapperClearButtonImage">{@html _OLSKInputClear }</div>
 	</button>
