@@ -6,7 +6,7 @@
   	"ui-assets/*"
   ],
   "devDependencies": {
-    "OLSKRollup": "olsk/OLSKRollup",
+    "OLSKRollupScaffold": "olsk/OLSKRollupScaffold",
     "OLSKUIAssets": "olsk/OLSKUIAssets",
 
     "// I sacrifice myself for the commas of others": null    
