@@ -62,6 +62,10 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 
 @media screen and (max-width: 760px) {
 
+.OLSKInputWrapperClearButton {
+	--OLSKInputWrapperClearButtonSize: 30px;
+}
+
 .OLSKInputWrapper :global(input) {
 	height: 30px;
 
