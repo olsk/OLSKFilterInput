@@ -15,7 +15,7 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 <slot></slot>
 
 {#if OLSKInputWrapperValue}
-	<button class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle OLSKToolbarButton" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') } on:click={ OLSKInputWrapperDispatchClear }>
+	<button class="OLSKInputWrapperClearButton OLSKLayoutElementTappable OLSKLayoutButtonNoStyle OLSKToolbarButton" title={ OLSKLocalized('OLSKInputWrapperClearButtonText') } on:mousedown={ (event) => event.preventDefault() } on:click={ OLSKInputWrapperDispatchClear }>
 		<div class="OLSKInputWrapperClearButtonImage">{@html _OLSKInputClear }</div>
 	</button>
 {/if}
