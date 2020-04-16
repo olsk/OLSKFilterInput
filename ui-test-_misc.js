@@ -10,7 +10,7 @@ describe('OLSKInputWrapper_Misc', function () {
 		return browser.fill('input', 'alfa');
 	});
 	
-	describe('OLSKInputWrapperClearButton', function testOLSKInputWrapperClearButton () {
+	describe('OLSKInputWrapperClearButton', function test_OLSKInputWrapperClearButton () {
 
 		it('classes OLSKLayoutElementTappable', function () {
 			browser.assert.hasClass(OLSKInputWrapperClearButton, 'OLSKLayoutElementTappable')
@@ -42,7 +42,7 @@ describe('OLSKInputWrapper_Misc', function () {
 
 	});
 	
-	describe('OLSKInputWrapperClearButtonImage', function testOLSKInputWrapperClearButtonImage () {
+	describe('OLSKInputWrapperClearButtonImage', function test_OLSKInputWrapperClearButtonImage () {
 
 		it('sets src', function () {
 			browser.assert.elements(`${ OLSKInputWrapperClearButtonImage } #_OLSKInputClear`, 1);
