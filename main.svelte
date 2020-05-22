@@ -70,11 +70,6 @@ import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 	height: 30px;
 
 	font-size: 14px;
-
-	/* MobileSafariRemoveDefaultInputStyle */
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 }
 
 }
