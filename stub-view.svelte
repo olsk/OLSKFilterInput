@@ -9,6 +9,6 @@ import Module from './main.svelte';
 </Module>
 
 <p>
-	<strong>TestOLSKInputWrapperDispatchClear</strong>
+	<strong>OLSKInputWrapperDispatchClear</strong>
 	<span id="TestOLSKInputWrapperDispatchClear">0</span>
 </p>
