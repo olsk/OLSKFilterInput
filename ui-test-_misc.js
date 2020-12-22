@@ -12,12 +12,12 @@ describe('OLSKInputWrapper_Misc', function () {
 	
 	describe('OLSKInputWrapperClearButton', function test_OLSKInputWrapperClearButton () {
 
-		it('classes OLSKLayoutElementTappable', function () {
-			browser.assert.hasClass(OLSKInputWrapperClearButton, 'OLSKLayoutElementTappable')
+		it('classes OLSKDecorTappable', function () {
+			browser.assert.hasClass(OLSKInputWrapperClearButton, 'OLSKDecorTappable')
 		});
 		
-		it('classes OLSKLayoutButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKInputWrapperClearButton, 'OLSKLayoutButtonNoStyle')
+		it('classes OLSKDecorButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKInputWrapperClearButton, 'OLSKDecorButtonNoStyle')
 		});
 		
 		it('classes OLSKToolbarButton', function () {
