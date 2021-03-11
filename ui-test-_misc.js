@@ -12,6 +12,10 @@ describe('OLSKInputWrapper_Misc', function () {
 	
 	describe('OLSKInputWrapperClearButton', function test_OLSKInputWrapperClearButton () {
 
+		it('sets type', function () {
+			browser.assert.attribute(OLSKInputWrapperClearButton, 'type', 'button');
+		});
+
 		it('classes OLSKDecorTappable', function () {
 			browser.assert.hasClass(OLSKInputWrapperClearButton, 'OLSKDecorTappable')
 		});
