@@ -7,7 +7,7 @@ import { OLSKLocalized } from 'OLSKInternational';
 import _OLSKInputClear from '../OLSKUIAssets/_OLSKInputClear.svg';
 </script>
 
-<div class="OLSKInputWrapper OLSKToolbarFlexible">
+<div class="OLSKInputWrapper">
 
 <slot></slot>
 
