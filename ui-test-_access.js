@@ -6,7 +6,7 @@ Object.entries({
 	OLSKInputWrapperClearButton: '.OLSKInputWrapperClearButton',
 	OLSKInputWrapperClearButtonImage: '.OLSKInputWrapperClearButtonImage',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 describe('OLSKInputWrapper_Access', function () {
