@@ -16,11 +16,11 @@ describe('OLSKInputWrapper_Access', function () {
 	});
 
 	it('shows OLSKInputWrapper', function () {
-		browser.assert.elements(OLSKInputWrapper, 1);
+		return browser.assert.elements(OLSKInputWrapper, 1);
 	});
 
 	it('hides OLSKInputWrapperClearButton', function () {
-		browser.assert.elements(OLSKInputWrapperClearButton, 0);
+		return browser.assert.elements(OLSKInputWrapperClearButton, 0);
 	});
 
 	context('input not empty', function () {
@@ -30,11 +30,11 @@ describe('OLSKInputWrapper_Access', function () {
 		});
 
 		it('shows OLSKInputWrapperClearButton', function () {
-			browser.assert.elements(OLSKInputWrapperClearButton, 1);
+			return browser.assert.elements(OLSKInputWrapperClearButton, 1);
 		});
 
 		it('shows OLSKInputWrapperClearButtonImage', function () {
-			browser.assert.elements(OLSKInputWrapperClearButtonImage, 1);
+			return browser.assert.elements(OLSKInputWrapperClearButtonImage, 1);
 		});
 	
 	});
@@ -46,7 +46,7 @@ describe('OLSKInputWrapper_Access', function () {
 		});
 
 		it('hides OLSKInputWrapperClearButton', function () {
-			browser.assert.elements(OLSKInputWrapperClearButton, 0);
+			return browser.assert.elements(OLSKInputWrapperClearButton, 0);
 		});
 	
 	});
